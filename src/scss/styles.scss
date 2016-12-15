@@ -91,6 +91,7 @@ a {
         padding: 1rem;
         cursor: pointer;
         transition: background-color .5s;
+        outline: none;
 
         &:hover {
             background-color: lighten($color-blue, 10);
@@ -123,8 +124,6 @@ a {
     &__title:first-child {
         padding-left: .7rem;
     }
-
-
 }
 
 .link {
@@ -138,6 +137,10 @@ a {
     &__col:first-child,
     &__col:nth-child(3) {
         width: 30%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: $color-blue;
     }
 
     &__col:nth-child(2),
@@ -149,5 +152,4 @@ a {
     &__col:first-child {
         padding-left: .7rem;
     }
-    
 }
