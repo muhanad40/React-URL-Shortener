@@ -1,20 +1,12 @@
-# Url Shortener Code Test
+# Url Shortener
 
-We'd like you to create a URL shortening service.
-- It should have a route where you can send a POST request with a URL in the body, which
-returns a short URL.
-- When you send a GET request to a previously returned URL, it should redirect to the
-POSTed URL.
-- We'd also like a simple frontend that can create and display shortened URLs without
-reloading the page.
-- For simplicity, don't worry about persisting the URLs between restarts (ie, we don't
-need it to talk to an external database).
-
-Use whatever languages and frameworks you are comfortable with. Don't worry about getting
-the whole thing working flawlessly, this is more to see how you structure a program. Please
-don't spend more than a few hours on it.
-
-## Submission
-
-Please fork this repository, write some code and update this README with a guide of how to
-run it.
+### User stories
+- [ ] When I click `shorten` button, it should POST to an endpoint and return a new shortened URL
+- [ ] When I enter a URL without a protocol, the URL should be prepended with `http://`
+- [ ] When I enter an invalid URL, I should see an error message
+- [ ] When I enter a valid URL, it should fade in and appear in the first row of the table of URLs
+- [ ] When I enter the page, I should see a list of shortened URLs I have created previously
+- [ ] When I click on a URL from my list of shortened URLs, it should redirect me to that link in a new tab
+- [ ] When I click the delete icon, I should see an alert
+- [ ] If a URL in the table is too long, it should be truncated
+- [ ] When I visit the page on a mobile device, it should display appropriately
