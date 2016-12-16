@@ -1,7 +1,8 @@
 <html>
 <head>
-    <title></title>
+    <title>URL Shortener</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
 </head>
 <body>
@@ -10,7 +11,7 @@
             <h1 class="header__title">URL Shortener</h1>
         </header>
 
-        <section class="form">
+        <section class="form is-invalid">
             <input type="text" class="form__input" name="url" placeholder="Enter a URL..." />
             <span class="error">Error message</span>
 
@@ -26,33 +27,17 @@
             </header>
 
             <article class="link">
-                <div class="link__col link__col--original">
+                <div class="link__col">
                     <a href="http://www.google.com" target="_blank">www.google.com/asdf/asdf/sadf/sadf/sd/fsda/f/fs/fsd</a>
                 </div>
 
-                <div class="link__col link__col--created">1 min ago</div>
+                <div class="link__col">1 min ago</div>
 
-                <div class="link__col link__col--short-url">
+                <div class="link__col">
                     <a href="http://sho.rt/4flj2ds2" target="_blank">sho.rt/4flj2ds2</a>
                 </div>
 
-                <div class="link__col link__col--col--delete">
-                    <a href="#" class="icon-delete"></a>
-                </div>
-            </article>
-
-            <article class="link">
-                <div class="link__col link__col--original">
-                    <a href="http://www.google.com" target="_blank">www.google.com</a>
-                </div>
-
-                <div class="link__col link__col--created">1 min ago</div>
-
-                <div class="link__col link__col--short-url">
-                    <a href="http://sho.rt/4flj2ds2" target="_blank">sho.rt/4flj2ds2</a>
-                </div>
-
-                <div class="link__col link__col--col--delete">
+                <div class="link__col">
                     <a href="#" class="icon-delete"></a>
                 </div>
             </article>

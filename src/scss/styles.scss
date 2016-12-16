@@ -1,5 +1,6 @@
 @import "./node_modules/normalize-scss/sass/normalize";
 @import 'variables';
+@import 'mixins';
 
 @include normalize();
 
@@ -7,6 +8,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: $color-grey;
+    padding: 1rem;
 }
 
 body * {
@@ -40,7 +42,7 @@ a {
 }
 
 .icon-delete {
-    background-image: url(map-get($icons, delete));
+    @include get-icon(delete, $color-red);
     background-size: 18px 18px;
     width: 18px;
     height: 18px;
@@ -151,5 +153,115 @@ a {
 
     &__col:first-child {
         padding-left: .7rem;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: inherit;
+    }
+
+    .container {
+        box-shadow: none;
+        margin-top: inherit;
+        padding: 1.5rem;
+    }
+
+    .form {
+        display: block;
+        margin-bottom: 1rem;
+
+        .error {
+            width: 100%;
+            top: -1.4rem; // 20px
+            text-align: center;
+            font-size: .875rem;
+        }
+
+        &__input {
+            border-radius: 4px 4px 0 0;
+        }
+
+        &__button {
+            position: relative;
+            top: -1px;
+            left: 0px;
+            border-radius: 0 0 4px 4px;
+            padding: .7rem;
+            font-size: 1.2rem;
+        }
+
+        &__input,
+        &__button {
+            width: 100%;
+        }
+    }
+
+    .urls-header {
+        display: none;
+    }
+
+    .link {
+        position: relative;
+        padding: 1rem;
+        display: block;
+        overflow: hidden;
+
+        &__col:nth-child(2) {
+            display: none;
+        }
+
+        &__col:first-child,
+        &__col:nth-child(3) {
+            width: 80%;
+        }
+
+        &__col:first-child,
+        &__col:nth-child(3) {
+            font-size: 1.1rem;
+        }
+        
+        &__col:first-child:before,
+        &__col:nth-child(3):before {
+            text-transform: uppercase;
+            color: $color-grey;
+            font-size: .6875rem; // 11px
+            display: block;
+        }
+
+        &__col:first-child {
+            padding: 0;
+            margin-bottom: .8rem;
+        }
+
+        &__col:first-child:before {
+            content: 'Original URL:';
+        }
+
+        &__col:nth-child(3):before {
+            content: 'Short URL:';
+        }
+
+        &__col:nth-child(4) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $color-red;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-delete {
+            @include get-icon(delete, $color-white);
+            background-size: 25px 25px;
+            width: 25px;
+            height: 25px;
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
     }
 }
