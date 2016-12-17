@@ -7,6 +7,8 @@ export default function () {
         <main className="container">
             <header className="header">
                 <h1 className="header__title">URL Shortener</h1>
+
+                <p><strong>NOTE:</strong> Only the URLs that load by default will redirect to their original URL. This is because this light app does not use a database and therefore the URL you submit is not saved anywhere.</p>
             </header>
 
             <UrlForm />
