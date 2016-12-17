@@ -41,8 +41,8 @@ describe('`appReducer` reducer', () => {
             })
 
         expect(newState.urls).toEqual([
-            testResponses.urls[0],
-            testResponses.urls[1]
+            testResponses.urls[1],
+            testResponses.urls[0]
         ])
     })
 })
