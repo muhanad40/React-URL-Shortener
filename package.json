@@ -6,6 +6,11 @@
     "url": "git@github.com:muhanad40/url-shortener-code-test.git",
     "type": "git"
   },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start",
+    "build": "./node_modules/.bin/gulp build",
+    "start": "node server.js"
+  },
   "author": "Muhanad Al-Rubaiee <muhanad40@gmail.com>",
   "license": "MIT",
   "dependencies": {
