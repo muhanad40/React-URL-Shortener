@@ -12,7 +12,7 @@ let urls = [
     Object.assign({}, url, { id: 4, original: 'www.ask.com', shortUrl: 'short.url/d24f323', created: '6 mins ago' }),
 ]
 
-export default {
+module.exports = {
     url,
     urls
 }
