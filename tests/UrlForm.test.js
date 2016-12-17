@@ -54,4 +54,34 @@ describe('UrlForm component', () => {
 
         expect(input.node.value).toEqual('')
     })
+
+    it('should show error message when form is submitted with an empty input field', () => {
+        let linkComponent = mount(
+                <Provider store={ store }>
+                    <ConnectedUrlForm />
+                </Provider>
+            ),
+            input  = linkComponent.find('.form__input'),
+            button = linkComponent.find('.form__button')
+
+        input.node.value = ''
+        button.simulate('submit')
+
+        expect(linkComponent.find('.error').length).toEqual(1)
+    })
+
+    it('should not show error message when form is submitted with a valid input field', () => {
+        let linkComponent = mount(
+                <Provider store={ store }>
+                    <ConnectedUrlForm />
+                </Provider>
+            ),
+            input  = linkComponent.find('.form__input'),
+            button = linkComponent.find('.form__button')
+
+        input.node.value = 'www.google.com'
+        button.simulate('submit')
+
+        expect(linkComponent.find('.error').length).toEqual(0)
+    })
 })
