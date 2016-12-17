@@ -6,42 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
 </head>
 <body>
-    <main class="container">
-        <header class="header">
-            <h1 class="header__title">URL Shortener</h1>
-        </header>
-
-        <form class="form is-invalid" method="post">
-            <input type="text" class="form__input" name="url" placeholder="Enter a URL..." />
-            <span class="error">Error message</span>
-
-            <input type="button" class="form__button" value="Shorten!" />
-        </form>
-
-        <section class="urls">
-            <header class="urls-header">
-                <div class="urls-header__title">Original</div>
-                <div class="urls-header__title">Created</div>
-                <div class="urls-header__title">Short URL</div>
-                <div class="urls-header__title">Delete</div>
-            </header>
-
-            <article class="link">
-                <div class="link__col">
-                    <a href="http://www.google.com" target="_blank">www.google.com/asdf/asdf/sadf/sadf/sd/fsda/f/fs/fsd</a>
-                </div>
-
-                <div class="link__col">1 min ago</div>
-
-                <div class="link__col">
-                    <a href="http://sho.rt/4flj2ds2" target="_blank">sho.rt/4flj2ds2</a>
-                </div>
-
-                <div class="link__col">
-                    <a href="#" class="icon-delete"></a>
-                </div>
-            </article>
-        </section>
-    </main>
+    <div id="url-shortener-app"></div>
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
