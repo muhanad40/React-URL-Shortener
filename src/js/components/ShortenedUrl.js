@@ -6,7 +6,11 @@ const mapStateToProps = (state) => {
     return {}
 }
 
-class ShortenedUrl extends Component {
+export class ShortenedUrl extends Component {
+    onDelete() {
+        console.log('delete link!')
+    }
+
     render() {
         return ShortenedUrlTemplate.apply(this)
     }

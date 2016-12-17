@@ -11,7 +11,7 @@ webpackConfig.externals = {
 module.exports = function(config) {
     config.set({
         basePath: '',
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'sinon'],
         files: [
             'tests/**/*.test.js'
         ],

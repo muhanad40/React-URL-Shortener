@@ -14,7 +14,7 @@ export default function () {
             </div>
 
             <div className="link__col">
-                <a href="#" className="icon-delete"></a>
+                <a href="#" className="icon-delete" onClick={ this.onDelete.bind(this) }></a>
             </div>
         </article>
     )
