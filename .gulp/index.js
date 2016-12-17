@@ -19,6 +19,7 @@ gulp.task('js', () => {
         .pipe(gulp.dest(config.output.js));
 })
 
-gulp.task('scss:watch', () => {
+gulp.task('watch', () => {
     gulp.watch(config.input.scss, ['scss']);
+    gulp.watch(config.input.js, ['js']);
 })
