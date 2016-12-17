@@ -27,14 +27,18 @@ export class UrlForm extends Component {
     }
 
     onSubmit(e) {
+        e.preventDefault()
+
         let isValid = this._validateForm()
 
         if(!isValid) {
             this.formIsInvalid = true
-            this.forceUpdate()
+        } else {
+            this.formIsInvalid = false
         }
 
         this._clearInputBox()
+        this.forceUpdate()
     }
 
     render() {
