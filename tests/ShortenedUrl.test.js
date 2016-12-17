@@ -10,7 +10,7 @@ const mockStore = configureStore(middlewares)
 
 let store = mockStore({})
 
-describe('Link component', () => {
+describe('ShortenedUrl component', () => {
     it('should render with given props', () => {
         let linkComponent = mount(
                 <Provider store={ store }>

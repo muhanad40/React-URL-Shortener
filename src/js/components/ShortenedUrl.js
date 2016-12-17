@@ -6,7 +6,6 @@ const mapStateToProps = (state) => {
     return {}
 }
 
-
 class ShortenedUrl extends Component {
     render() {
         return ShortenedUrlTemplate.apply(this)
