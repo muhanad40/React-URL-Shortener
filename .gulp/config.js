@@ -15,7 +15,24 @@ const input = {
     }
 
 const webpack = {
-
+    output: {
+        filename: 'app.js'
+    },
+    resolve: {
+        extensions: ['', '.js']
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                query: {
+                    presets: ["latest", "react"]
+                }
+            }
+        ]
+    }
 }
 
 module.exports = {
