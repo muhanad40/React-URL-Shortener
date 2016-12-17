@@ -31,7 +31,7 @@ describe('ShortenedUrl component', () => {
     })
 
     it('should trigger delete callback when it is clicked', () => {
-        ShortenedUrl.prototype.onDelete = sinon.spy()
+        sinon.spy(ShortenedUrl.prototype, 'onDelete')
 
         let linkComponent = mount(
                 <Provider store={ store }>
