@@ -23,3 +23,5 @@ gulp.task('watch', () => {
     gulp.watch(config.input.scss, ['scss']);
     gulp.watch(config.input.js, ['js']);
 })
+
+gulp.task('build', ['scss', 'js'])
