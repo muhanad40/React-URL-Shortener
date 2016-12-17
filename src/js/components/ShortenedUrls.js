@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 import ShortenedUrlsTemplate from '../templates/ShortenedUrls'
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        urls: state.appReducer.urls
+    }
 }
 
 class ShortenedUrls extends Component {

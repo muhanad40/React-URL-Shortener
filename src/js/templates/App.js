@@ -19,7 +19,7 @@ export default function () {
                     <div className="urls-header__title">Delete</div>
                 </header>
 
-                <ShortenedUrls links={ [] } />
+                <ShortenedUrls />
             </section>
         </main>
     )
