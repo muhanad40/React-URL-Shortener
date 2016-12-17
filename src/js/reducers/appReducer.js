@@ -8,7 +8,8 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case 'STORE_URL':
             newState = Object.assign({}, state)
-            newState.urls.push(action.urlObj)
+            newState.urls = state.urls.slice(0)
+            newState.urls.unshift(action.urlObj)
             return newState
 
         case 'STORE_URLS':
