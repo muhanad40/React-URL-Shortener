@@ -1,10 +1,11 @@
 import React from 'react'
 import { Provider } from 'react-redux'
+import { connect } from 'react-redux'
 import { mount } from 'enzyme'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import ConnectedShortenedUrl, { ShortenedUrl } from '../src/js/components/ShortenedUrl'
- 
+
 const middlewares = [thunk]
 const mockStore = configureStore(middlewares)
 
@@ -32,10 +33,15 @@ describe('ShortenedUrl component', () => {
 
     it('should trigger delete callback when it is clicked', () => {
         sinon.spy(ShortenedUrl.prototype, 'onDelete')
-
-        let linkComponent = mount(
+        let mapDispatchToProps = (dispatch) => {
+                return {
+                    deleteUrl: (id) => {}
+                }
+            },
+            ConnectedShortenedUrl = connect(null, mapDispatchToProps)(ShortenedUrl),
+            linkComponent = mount(
                 <Provider store={ store }>
-                    <ShortenedUrl id='1' original='www.google.com' created='1 min ago' shortUrl='sho.rt/f343g4f' />
+                    <ConnectedShortenedUrl id='1' original='www.google.com' created='1 min ago' shortUrl='sho.rt/f343g4f' />
                 </Provider>
             ),
             deleteEl = linkComponent.find('.icon-delete')

@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ShortenedUrlTemplate from '../templates/ShortenedUrl'
+import { deleteUrl } from '../actions'
 
 const mapStateToProps = (state) => {
     return {}
 }
 
 export class ShortenedUrl extends Component {
-    onDelete() {
-        // console.log('delete link!')
+    onDelete(id, e) {
+        this.props.deleteUrl(id)
     }
 
     render() {
@@ -16,4 +17,12 @@ export class ShortenedUrl extends Component {
     }
 }
 
-export default connect(mapStateToProps)(ShortenedUrl)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        deleteUrl: (id) => {
+            dispatch(deleteUrl(id))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShortenedUrl)

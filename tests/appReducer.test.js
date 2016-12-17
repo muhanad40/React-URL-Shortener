@@ -45,4 +45,22 @@ describe('`appReducer` reducer', () => {
             testResponses.urls[0]
         ])
     })
+
+    it('should delete a url', () => {
+
+        let initialState = {
+                urls: [
+                    testResponses.urls[0],
+                    testResponses.urls[1]
+                ]
+            },
+            newState = appReducer(initialState, {
+                type: 'DELETE_URL',
+                id: testResponses.urls[1].id
+            })
+
+        expect(newState.urls).toEqual([
+            testResponses.urls[0]
+        ])
+    })
 })

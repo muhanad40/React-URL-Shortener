@@ -14,6 +14,13 @@ export function fetchUrls() {
     }
 }
 
+export function deleteUrl(id) {
+    return {
+        type: 'DELETE_URL',
+        id
+    }
+}
+
 export function storeUrls(urlsObj) {
     return {
         type: 'STORE_URLS',

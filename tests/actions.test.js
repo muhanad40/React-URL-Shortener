@@ -1,6 +1,6 @@
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { shortenUrl, storeUrl, fetchUrls, storeUrls } from '../src/js/actions'
+import { shortenUrl, storeUrl, fetchUrls, storeUrls, deleteUrl } from '../src/js/actions'
 import testResponses from './test_responses'
 
 const middlewares = [thunk]
@@ -24,6 +24,17 @@ describe('`storeUrl` action', () => {
         expect(action).toEqual({
             type: 'STORE_URL',
             urlObj: testResponses.url
+        })
+    })
+})
+
+describe('`deleteUrl` action', () => {
+    it('should create action to delete a URL', () => {
+        let action = deleteUrl(1)
+
+        expect(action).toEqual({
+            type: 'DELETE_URL',
+            id: 1
         })
     })
 })
