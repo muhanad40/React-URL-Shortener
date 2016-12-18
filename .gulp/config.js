@@ -39,7 +39,7 @@ const webpack = {
         if(!yargs.dev) {
             return [
                 new webpackStream.webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
-                new webpack.webpack.DefinePlugin({
+                new webpackStream.webpack.DefinePlugin({
                     "process.env": {
                         NODE_ENV: JSON.stringify("production")
                     }
