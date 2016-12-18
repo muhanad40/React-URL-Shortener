@@ -25,7 +25,7 @@ function generateUniqueUrl() {
 }
 
 app.use(bodyParser.json())
-app.use('/assets', express.static(process.env.PWD + 'assets'))
+app.use('/assets', express.static(path.join(process.env.PWD, 'assets')))
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+'/index.html'))
