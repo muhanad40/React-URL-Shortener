@@ -4,6 +4,13 @@
 
 ### [Live demo](https://dummy-url-shortener.herokuapp.com/)
 
+### Local installation
+1. `cd React-URL-Shortener`
+2. `yarn`
+3. `npm run postinstall`
+4. `npm start`
+5. Go to `http://localhost:3000`
+
 ### User stories
 - [x] When I click `shorten` button, it should POST to an endpoint and return a new shortened URL
 - [x] When I enter an invalid URL, I should see an error message
