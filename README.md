@@ -2,7 +2,7 @@
 
 This is not a real URL shortener. It will not shorten any URLs (for spam and laziness purposes). It's just a small toy app built to flex them coding muscles 💪
 
-### [Live demo](https://dummy-url-shortener.herokuapp.com/)
+### [Live demo](https://dummy-url-shortener.herokuapp.com/) (mobile responsive 😎)
 
 ### Local installation
 1. `cd React-URL-Shortener`
