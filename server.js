@@ -13,15 +13,14 @@ function _generateRandomChar() {
 }
 
 // Generate unique ID
-function generateUniqueUrl() {
-        var base     = 'http://localhost:3000',
-            uniqueId = '',
+function generateUniqueId() {
+        var uniqueId = '',
             idLength = 7
 
     for (var i = 0; i <= idLength; i++) {
         uniqueId += _generateRandomChar()
     }
-    return base + '/' + uniqueId
+    return uniqueId
 }
 
 app.use(bodyParser.json())
@@ -40,7 +39,7 @@ app.post('/shorten', function (req, res) {
     var url      = req.body.url,
         response = JSON.stringify(Object.assign({}, testsResponses.url, {
             original: url,
-            shortUrl: generateUniqueUrl()
+            shortUrl: 'http://' + path.join(req.get('host'), generateUniqueId())
         }))
 
     res.setHeader('Content-Type', 'application/json')
