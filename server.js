@@ -23,7 +23,7 @@ function generateUniqueUrl() {
 }
 
 app.use(bodyParser.json())
-app.use('/assets', express.static('assets'))
+app.use('/assets', express.static(__dirname + 'assets'))
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+'/index.html'))
