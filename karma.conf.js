@@ -13,6 +13,7 @@ module.exports = function(config) {
         basePath: '',
         frameworks: ['jasmine', 'sinon'],
         files: [
+            './node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
             'tests/**/*.test.js'
         ],
         webpack: webpackConfig,
@@ -27,7 +28,7 @@ module.exports = function(config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Chrome'],
+        browsers: ['Chrome', 'PhantomJS'],
         singleRun: false,
         concurrency: Infinity
     })

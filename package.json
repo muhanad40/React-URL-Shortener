@@ -7,7 +7,7 @@
     "type": "git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/karma start",
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS",
     "build": "./node_modules/.bin/gulp build",
     "start": "node server.js"
   },
@@ -34,11 +34,13 @@
     "karma": "^1.3.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
     "karma-sinon": "^1.0.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "^0.0.26",
     "karma-webpack": "^1.8.0",
     "normalize-scss": "^6.0.0",
+    "phantomjs-polyfill-object-assign": "^0.0.2",
     "react-addons-test-utils": "^15.4.1",
     "react-redux": "^5.0.1",
     "redux-devtools-extension": "^1.0.0",
