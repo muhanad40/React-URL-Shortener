@@ -1,4 +1,6 @@
-let path = require('path')
+let path          = require('path'),
+    yargs         = require('yargs').argv,
+    webpackStream = require('webpack-stream')
 
 const dirs = {
     raw:   path.join('.', 'src'),
@@ -32,7 +34,16 @@ const webpack = {
                 }
             }
         ]
-    }
+    },
+    plugins: function () {
+        if(!yargs.dev) {
+            return [
+                new webpackStream.webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })
+            ]
+        } else {
+            return []
+        }
+    }()
 }
 
 module.exports = {
