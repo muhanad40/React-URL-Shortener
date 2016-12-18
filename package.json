@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS",
-    "postinstall": "./node_modules/.bin/gulp build",
+    "postinstall": "node_modules/.bin/gulp build",
     "start": "node server.js"
   },
   "author": "Muhanad Al-Rubaiee <muhanad40@gmail.com>",
