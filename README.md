@@ -1,6 +1,6 @@
 # React/ExpressJS URL Shortener [![Build Status](https://travis-ci.org/muhanad40/React-URL-shortener.svg?branch=master)](https://travis-ci.org/muhanad40/React-URL-shortener)
 
-This is not a real URL shortener. It will not shorten any URLs (for spam and laziness purposes). It's just a small toy app built to flex them coding muscles 💪
+This is not a real URL shortener. It will not shorten any URLs (for spam and laziness purposes). It's just a small toy app built to flex them coding muscles 💪. Also, I whipped up something quickly with Sketch so take it easy on the design.
 
 ### [Live demo](https://dummy-url-shortener.herokuapp.com/) (mobile responsive 😎)
 
