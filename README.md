@@ -1,5 +1,7 @@
 # Url Shortener
 
+[![Build Status](https://travis-ci.org/muhanad40/url-shortener-code-test.svg?branch=master)](https://travis-ci.org/muhanad40/url-shortener-code-test)
+
 ### User stories
 - [ ] When I click `shorten` button, it should POST to an endpoint and return a new shortened URL
 - [ ] When I enter a URL without a protocol, the URL should be prepended with `http://`
